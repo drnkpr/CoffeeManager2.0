@@ -12,6 +12,9 @@ btnCloseAdauga.addEventListener('click', function(){
 });
 
 
+
+
+
 var btnAdaugaPrajeala = document.getElementById('adaugaPrajeala');
 var btnClosePrajeala = document.getElementById('closeAdaugaPrajeli');
 var modalPrajeli = document.getElementById('mdl-prajeli');
