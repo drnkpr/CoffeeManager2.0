@@ -1,0 +1,521 @@
+body{
+    font-family: Lato;
+    background-color: #2D3748;
+    color: #18FFFF;
+}
+
+#sidePanel{
+    position: absolute;
+    left: 1%;
+    width: 17%;
+    margin-top: 5vh;
+    height: 90vh;
+    background-color: #2D3748 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+}
+
+button:hover{
+    background-color: #18FFFF;
+    transition: 0.5s;
+    color: #2D3748;
+}
+
+.btn{
+    color: #E2E8F0;
+    font-family: Lato;
+    font-weight: 500;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+
+}
+
+#sidePanel h2{
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+button:focus, button:active:focus, button.active:focus {
+    outline: none;
+}  
+
+#userInfo{
+    background-color: #2D3748;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vh;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+}
+
+#pic {
+    width: 30%;
+    background-image: url("userpic.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+
+#usr{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    width: 70%;
+    text-align: center;
+    color: #E2E8F0;
+}
+
+#usr p:nth-of-type(1){
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 0;
+    color: #18FFFF;
+}
+
+#serviceInfo {
+    width: 30%;
+    height: 30vh;
+    background-color: #E2E8F0;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    background-color: #2D3748;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+
+}
+
+#serviceInfo h2{
+    color: #18FFFF;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+#serviceInfo p{
+    font-family: Lato;
+    font-weight: 400;
+    color:#E2E8F0;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#mainBody{
+    display: flex;
+    flex-direction: row;
+}
+
+#titluPagina{
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+}
+
+#titluPagina h2{ 
+    font-weight: bold;
+    font-size: 3em;
+    font-family: Poppins;
+}
+
+#queues{
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
+    height: 50vh;
+    width: 76%;
+    background-color: #2D3748; 
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+}
+
+#queues::-webkit-scrollbar {
+    display: none;
+  }
+
+
+#queues h2{
+    margin-top: 250px;
+    margin-bottom: 100px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+table th{
+    color: #E2E8F0;
+    padding-bottom: 5vh;
+    font-size: 1.7em;
+}
+
+
+
+table td{
+    color: #E2E8F0;
+    padding: 5px;
+}
+
+tr:hover td{
+    background-color: #18FFFF;
+    color: #2D3748;
+    transition: 0.5s;
+}
+
+
+
+#noHover {
+    pointer-events: none;
+}
+
+
+
+
+
+
+/* de aici incepe pagina helper-prajire */
+
+#mainPrajire{
+    width: 64%;
+    height: 65vh;
+    background-color: #2D3748;
+    position: absolute;
+    top: 8vh;
+    left: 1.5%;
+    text-align: center;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+}
+
+#mainPrajire h1,h5{
+    padding-top: 2vh;
+}
+
+#mainPrajire span {
+    color: #18FFFF;
+}
+
+#mainPrajire button:nth-of-type(1){
+    position: absolute;
+    top: 38vh;
+    right: 20%;
+}
+
+#mainPrajire button:nth-of-type(2) {
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+}
+
+#mainPrajire button:nth-of-type(3):hover{
+    background-color: #F44336;
+}
+
+#mainPrajire button:nth-of-type(2):hover{
+    background-color: #4CAF50;
+}
+
+
+#mainPrajire button:nth-of-type(3) {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+#mainPrajire p {
+    position: absolute;
+    top: 38vh;
+    left: 6%;
+    color: #E2E8F0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#mainPrajire h5{
+    margin-top: 7vh;
+    color: #E2E8F0;
+    text-align: left;
+    margin-left: 6%;
+}
+
+#mainPrajire h1{
+    margin-top: 5vh;
+    color: #E2E8F0;
+}
+
+
+#queue_helper{
+    background-color: #2D3748;
+    position: absolute;
+    top: 8vh;
+    right: 0.75%;
+    height: 90vh;
+    width: 32%;
+    padding-left: 0.75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+}
+
+#t-prajite {
+    margin-top: 5vh;
+}
+
+
+
+#t-urmatoare {
+    margin-bottom: 5vh;
+}
+
+#notes{
+    position: absolute;
+    bottom: 12vh;
+    left: 1.5%;
+    width: 65%;
+}
+
+#notes h5{
+    margin-left: 6%;
+    color: #E2E8F0;
+}
+
+
+
+
+
+/* pagina  */
+
+
+#titluPrajeli{
+    font-family: Poppins;
+    font-weight: 500;
+    position: absolute;
+    left: 5%;
+    top: 5vh;
+}
+
+.tabelPrajeli{
+    position: absolute;
+    top: 5vh;
+    width: 90%;
+    left: 5%;
+}
+
+#modCozi{
+    position: absolute;
+    top: 17vh;
+    left: 5%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+#modCozi button{
+    margin-left: 20px;
+}
+
+#tabelPrajeli{
+    position: absolute;
+    left: 5%;
+    top: 25vh;
+    height: 70vh;
+    width: 90%;
+    background-color: #2D3748; 
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+}
+
+
+#tabelPrajeli::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  #tabelPrajeli th{
+      font-family: Poppins;
+  }
+
+  #tabelPrajeli td{
+      font-family: Lato;
+  }
+
+#backButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.6em;
+}
+
+
+
+
+/* pagina sortimente */
+
+#tabelSortimente{
+    position: absolute;
+    left: 5%;
+    top: 25vh;
+    height: 70vh;
+    width: 90%;
+    background-color: #2D3748; 
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+}
+
+
+#titluSortimente{
+    font-family: Poppins;
+    font-weight: 500;
+    position: absolute;
+    left: 5%;
+    top: 5vh;
+}
+
+
+#modSortimente{
+    position: absolute;
+    top: 17vh;
+    left: 5%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+#modSortimente button{
+    margin-left: 20px;
+}
+
+
+
+
+.mdl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.8s;
+}
+
+
+.active-modal{
+    visibility: visible;
+    opacity: 1;
+} 
+
+
+#sortimente{
+    position: relative;
+    background-color: #2D3748;
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+#sortimente h3{
+    margin-top: 15vh;
+}
+
+#sortimente i{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#formAdaugaSortiment{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 70%;
+}
+
+#formAdaugaSortiment button{
+    margin-top: 3vh; 
+}
+
+#formAdaugaSortiment label {
+    color: #E2E8F0;
+}
+
+
+
+
+
+
+#prajeli{
+    position: relative;
+    background-color: #2D3748;
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+
+#prajeli h3{
+    margin-top: 15vh;
+}
+
+#prajeli i{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 2em;
+    cursor: pointer;
+}

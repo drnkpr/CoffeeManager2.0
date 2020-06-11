@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1 id="titluSortimente">Sortimente</h1>
+
+<div id="modSortimente" class="container">
+    <button class="btn btn-large" id="adaugaSortiment">Adauga</button>
+    <button class="btn btn-large">Istoric</button>
+</div>
+
+<div id="tabelSortimente">
+    <table>
+    <tr>
+        <th>Nume</th>
+        <th>Cantitate Verde</th>
+        <th>Cantitate Prajita</th>
+    </tr>
+
+    
+        <% arrCoffee.forEach(function(coffee){%>
+        <tr>
+            <td> <%= coffee.name %></td>
+            <td><%= coffee.cantitateVerde %></td>
+            <td><%= coffee.cantitatePrajita %></td>
+        </tr>
+        <% }); %>
+</table>
+</div>
+
+<button class="btn btn-large" id="backButton" onclick="location.href= '/';"><i class="fas fa-home"></i></button>
+
+
+<div class="mdl" id="mdl-sortimente">
+    <div id="sortimente">
+
+        <i id="closeAdauga" class="far fa-times-circle"></i>
+
+        <h3>Adauga detaliile pentru un sortiment nou</h3>
+
+        <form action="/" method="POST" id="formAdaugaSortiment">
+            <label for="numeSortiment">Nume Sortiment:</label>
+        <input type="text" name="numeSortiment" id="numeSortiment">
+            <label for="cantitate">Cantitate</label>
+        <input type = "number" name="cantitate" id="cantitate">
+            <label for="procent">Procentaj dupa prajire</label>
+        <input type="number" name="procent" id="procent">
+            <label for="note">Note prajire</label>
+        <input type="textbox" name="note" id="note">
+        
+        <button type="submit" class="btn btn-lg" id="addCoffee">Adauga Cafea</button>
+    </form>
+    </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

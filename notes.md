@@ -1,0 +1,1 @@
+color pallete: D88A83 roz-portocaliu - BA6C65 ceva mai maroniu - F2BE8D maro mai deschis - 394359 dark - 303242 + teal for contrast
