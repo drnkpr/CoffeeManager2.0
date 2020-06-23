@@ -14,32 +14,101 @@ var coffeeSchema = new mongoose.Schema({
     name: String,
     cantitateVerde: Number,
     cantitatePrajita: Number,
+    procent: Number,
     note: String
 });
-
 var Coffee = mongoose.model('Coffee', coffeeSchema);
 
 
-var queueSchema = new mongoose.Schema({
-    sortiment: String, 
+var prajealaSchema = new mongoose.Schema({
+    sortiment: String,
     cantitate: Number,
-    note: String,
-    importanta: Number
+    dueDate: String,
+    client: String, 
 });
+var Prajeala = mongoose.model('Prajeala', prajealaSchema);
 
-var Queue = mongoose.model('Queue', queueSchema);
+
+
+
+var prajitaSchema = new mongoose.Schema({
+    sortiment: String,
+    cantitate: Number,
+    client: String, 
+    failed: Boolean,
+    prajitor: String, 
+    date: String,
+    note: String
+});
+var Prajita = mongoose.model('Prajita', prajitaSchema);
+
+
+
+
 
 app.get("/", function(req, res){
     res.render("home");
 });
 
 app.get("/helper", function(req, res){
-    res.render("helper_prajire");
+   
+    var arr=[];
+    var arr2 = [];
+
+    Prajeala.find({}, function(err, prajeala){
+        if(err){
+            console.log(err);
+        } else {
+            for(var i=0; i < prajeala.length; i++){
+                arr.push(prajeala[i]);
+            }
+            Prajita.find({}, function(err, prajite){
+                if(err){
+                    console.log(err);
+                } else {
+                    for(var j = 0; j < prajite.length; j++){
+                        arr2.push(prajite[j]);
+                    }
+                }
+                res.render("helper_prajire", {arrPrajeala: arr, arrPrajite: arr2});
+            });
+        }
+    });
+    
 });
 
+
+
+
+
 app.get("/prajeli", function(req, res){
-    res.render("prajeli");
+
+    var arr=[];
+    var arr2 = [];
+
+    Prajeala.find({}, function(err, prajeala){
+        if(err){
+            console.log(err);
+        } else {
+            for(var i=0; i < prajeala.length; i++){
+                arr.push(prajeala[i]);
+            }
+            Prajita.find({}, function(err, prajite){
+                if(err){
+                    console.log(err);
+                } else {
+                    for(var j = 0; j < prajite.length; j++){
+                        arr2.push(prajite[j]);
+                    }
+                }
+                res.render("prajeli", {arrPrajeala: arr, arrPrajite: arr2});
+            });
+        }
+    });
+    
 });
+
+
 
 app.get("/sortimente", function(req, res){
     var arr = [];
@@ -53,6 +122,53 @@ app.get("/sortimente", function(req, res){
         }
         res.render("sortimente", {arrCoffee: arr});
     });});
+
+
+app.post("/sortimente", function(req,res){
+    var numeSortiment = req.body.numeSortiment.toLowerCase();
+    var cantitate = req.body.cantitate;
+    var procent = req.body.procent;
+    var note = req.body.note.toLowerCase();
+
+
+
+    Coffee.create({
+        name: numeSortiment,
+        cantitateVerde: cantitate,
+        procent: procent,
+        cantitatePrajita: 0 
+     }, function(err, coffee){
+         if(err){
+             console.log(err);
+         } else {
+             res.redirect("/sortimente");
+         }
+     });
+
+});
+
+app.post("/prajeli", function(req, res){
+
+    var sortiment = req.body.numeSortiment.toLowerCase();
+    var cantitate = req.body.cantitate;
+    var dueDate = req.body.dueDate;
+    var client = req.body.client;
+    var note = req.body.note;
+
+    Prajeala.create({
+        sortiment: sortiment,
+        cantitate: cantitate,
+        dueDate: dueDate,
+        client: client,
+        note: note
+    }, function(err, prajeala){
+        if(err){
+            console.log(err);
+        } else {
+            res.redirect("/prajeli");
+        }
+    });
+});
 
 
 

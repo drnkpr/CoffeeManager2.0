@@ -286,14 +286,30 @@ tr:hover td{
 }
 
 #t-prajite {
-    margin-top: 5vh;
+    margin-top: 3vh;
+    overflow: auto;
+    max-height: 30vh;
 }
 
 
 
 #t-urmatoare {
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
+    overflow: auto;
+    max-height: 30vh;
+
 }
+
+
+#t-praite::-webkit-scrollbar {
+    display: none;
+  }
+
+  #t-urmatoare::-webkit-scrollbar {
+    display: none;
+  }
+
+
 
 #notes{
     position: absolute;
@@ -331,7 +347,7 @@ tr:hover td{
 
 #modCozi{
     position: absolute;
-    top: 17vh;
+    top: 13vh;
     left: 5%;
     display: flex;
     justify-content: start;
@@ -345,8 +361,8 @@ tr:hover td{
 #tabelPrajeli{
     position: absolute;
     left: 5%;
-    top: 25vh;
-    height: 70vh;
+    top: 20vh;
+    height: 35vh;
     width: 90%;
     background-color: #2D3748; 
     overflow: auto;
@@ -364,6 +380,10 @@ tr:hover td{
     display: none;
   }
 
+  
+#tabelPrajite::-webkit-scrollbar {
+    display: none;
+  }
 
   #tabelPrajeli th{
       font-family: Poppins;
@@ -375,11 +395,28 @@ tr:hover td{
 
 #backButton{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1vh;
+    right: 1%;
     font-size: 1.6em;
 }
 
+
+#tabelPrajite{
+    position: absolute;
+    left: 5%;
+    top: 63vh;
+    height: 35vh;
+    width: 90%;
+    background-color: #2D3748; 
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 7px rgb(14, 18, 24), -2px -3px 7px #4A5568; 
+    box-shadow: 2px 3px 7px  rgb(14, 18, 24), -2px -3px 7px #4A5568;
+    border-radius: 30px;
+}
 
 
 
@@ -459,6 +496,7 @@ tr:hover td{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-radius: 30px;
 } 
 
 #sortimente h3{
@@ -496,6 +534,16 @@ tr:hover td{
 
 
 
+
+
+
+
+
+
+
+
+
+
 #prajeli{
     position: relative;
     background-color: #2D3748;
@@ -505,8 +553,8 @@ tr:hover td{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-radius: 30px;
 } 
-
 
 #prajeli h3{
     margin-top: 15vh;
@@ -519,3 +567,21 @@ tr:hover td{
     font-size: 2em;
     cursor: pointer;
 }
+/* 
+#formAdaugaSortiment{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 70%;
+}
+
+#formAdaugaSortiment button{
+    margin-top: 3vh; 
+}
+
+#formAdaugaSortiment label {
+    color: #E2E8F0;
+} */

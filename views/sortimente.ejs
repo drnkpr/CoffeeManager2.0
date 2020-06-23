@@ -9,7 +9,7 @@
 </div>
 
 <div id="tabelSortimente">
-    <table>
+    <table id="tabel">
     <tr>
         <th>Nume</th>
         <th>Cantitate Verde</th>
@@ -37,7 +37,7 @@
 
         <h3>Adauga detaliile pentru un sortiment nou</h3>
 
-        <form action="/" method="POST" id="formAdaugaSortiment">
+        <form action="/sortimente" method="POST" id="formAdaugaSortiment">
             <label for="numeSortiment">Nume Sortiment:</label>
         <input type="text" name="numeSortiment" id="numeSortiment">
             <label for="cantitate">Cantitate</label>
@@ -47,10 +47,10 @@
             <label for="note">Note prajire</label>
         <input type="textbox" name="note" id="note">
         
-        <button type="submit" class="btn btn-lg" id="addCoffee">Adauga Cafea</button>
+        <button type="submit" class="btn btn-lg" id="addCoffee">Adauga Sortiment Nou</button>
     </form>
     </div>
 </div>
 
-
+<script src="sortimente.js"></script>
 <%- include("partials/footer.ejs") %>

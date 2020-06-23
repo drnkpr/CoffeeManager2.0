@@ -6,8 +6,7 @@
 
 <div id="modCozi" class="container">
     <button class="btn btn-large" id="adaugaPrajeala">Adauga</button>
-    <button class="btn btn-large">Istoric</button>
-</div>
+  </div>
 
 
 <div id="tabelPrajeli">
@@ -17,38 +16,54 @@
       <th>Cantitate</th> 
       <th>Due date</th>
       <th>Client</th>
-      <th>Failed</th>
-      <th>Prajitor</th>
     </tr>
+    <tr>
+      <% arrPrajeala.forEach(function(prajeala){%>
         <tr>
-        <td>Miserupia</td>
-        <td>22</td>
-        <td>22.22.22</td>
-        <td>Niculina</td>
-        <td>Yes/No</td>
-        <td>Un nume</td>
-      </tr>       <tr>
-        <td>Miserupia</td>
-        <td>22</td>
-        <td>22.22.22</td>
-        <td>Niculina</td>
-        <td>Yes/No</td>
-        <td>Un nume</td>
-      </tr>     <tr>
-        <td>Miserupia</td>
-        <td>22</td>
-        <td>22.22.22</td>
-        <td>Niculina</td>
-        <td>Yes/No</td>
-        <td>Un nume</td>
-      </tr>      
+            <td> <%= prajeala.sortiment %></td>
+            <td><%= prajeala.cantitate %></td>
+            <td><%= prajeala.dueDate %></td>
+            <td><%= prajeala.client %></td>
+
+        </tr>
+        <% }); %>
+    </tr>      
   </table>
 
 
 </div>
 
-<button class="btn btn-large" id="backButton" onclick="location.href= '/';"><i class="fas fa-home"></i></button>
 
+<div id="tabelPrajite">
+  <table class="tabelPrajeli">
+      <tr id="noHover">
+        <th>Sortiment</th>
+        <th>Cantitate</th> 
+        <th>Due date</th>
+        <th>Client</th>
+        <th>Failed</th>
+        <th>Prajitor</th>
+        <th>Note</th>
+      </tr>
+      <tr>
+        <% arrPrajite.forEach(function(prajite){%>
+          <tr>
+              <td> <%= prajite.sortiment %></td>
+              <td><%= prajite.cantitate %></td>
+              <td><%= prajite.date %></td>
+              <td><%= prajite.client %></td>
+              <td><%= prajite.failed %></td>
+              <td><%= prajite.prajitor %></td>
+              <td><%= prajite.note %></td>
+          </tr>
+          <% }); %>
+      </tr>      
+    </table>
+  
+  
+  </div>
+
+<button class="btn btn-large" id="backButton" onclick="location.href= '/';"><i class="fas fa-home"></i></button>
 
 
 
@@ -57,19 +72,25 @@
 
       <i id="closeAdaugaPrajeli" class="far fa-times-circle"></i>
 
-      <h3>Adauga detaliile pentru o prajeala noua</h3>
+      <h3>Adauga detaliile pentru un sortiment nou</h3>
 
-      <form action="/" method="POST" id="formAdaugaPrajeli">
-        <input type="text" name="sortiment" id="sortiment">
-        <input type="number" name="cantitate" id="cantitate">
-        <input type="date" name="due_date" id="due_date">
-        <input type="text" name="client" id="client">
-
-    
-      <button type="submit" class="btn btn-lg" id="addPrajeala">Adauga Prajeala</button>
+      <form action="/prajeli" method="POST" id="formAdaugaSortiment">
+          <label for="numeSortiment">Nume Sortiment:</label>
+      <input type="text" name="numeSortiment" id="numeSortiment">
+        <label for="cantitate">Cantitate:</label>
+      <input type="number" name="cantitate" id="cantitate">
+        <label for="dueDate">Data limita:</label>
+      <input type="date" name="dueDate" id="dueDate">
+        <label for="client">Scop/Client:</label>
+      <input type="text" name="client" id="client">
+      
+      <button type="submit" class="btn btn-lg" id="addCoffee">Adauga Prajeala Noua</button>
   </form>
   </div>
 </div>
+
+
+<script src="prajeala.js"></script>
 
 
 <%- include("partials/footer.ejs") %>

@@ -3,8 +3,8 @@
 
 
 <div id="mainPrajire" class="container-fluid">
-    <h1>Prajire in curs - <span>Sortiment</span> - <span>200g</span></h1>
-    <h5>Urmareste pasii, tine cont de note Urmareste pasii, tine cont de note Urmareste pasii, tine cont de noteUrmareste pasii, tine cont de note</h5>
+    <h1>Prajire in curs - <span><%= arrPrajeala[0].sortiment %></span> - <span><%= arrPrajeala[0].cantitate %>g</span> </h1>
+    <h5><%= arrPrajeala[0].client %></h5>
 
     <!-- some kind of steps and a next button???? -->
 
@@ -24,55 +24,43 @@
 
 
 <div id="queue_helper" class="container-fluid">
-    <table id="t-prajite">
+  <div id="t-prajite">
+    <h5>Prajirile facute</h5>
+    <table >
         <tr>
           <th>Sortiment</th>
           <th>Cantitate</th> 
         </tr>
-        <tr>
-          <td>Miserupia</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>Sortiment2</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>Alt Sortiment</td>
-          <td>44</td>
-        </tr>         <tr>
-          <td>Alt Sortiment</td>
-          <td>44</td>
-        </tr>         <tr>
-          <td>Alt Sortiment</td>
-          <td>44</td>
-        </tr>     
-      </table>
 
+        <% arrPrajite.forEach(function(prajite){%>
+          <tr>
+              <td> <%= prajite.sortiment %></td>
+              <td><%= prajite.cantitate %></td>
+          </tr>
+          <% }); %>
+
+        
+      </table>
+    </div>
       <h3>Prajire curenta</h3>
+    <div id="t-urmatoare">
+    <h5>Prajirile urmatoare</h5>
 
-      <table id="t-urmatoare">
+      <table >
         <tr>
           <th>Sortiment</th>
           <th>Cantitate</th> 
         </tr>
-        <tr>
-          <td>Miserupia</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>Sortiment2</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>Alt Sortiment</td>
-          <td>44</td>
-        </tr> 
-        <tr>
-          <td>Alt Sortiment</td>
-          <td>44</td>
-        </tr>     
+ 
+        <%  for(var x = 1; x < arrPrajeala.length; x++){ %>
+          <tr>
+            <td> <%= arrPrajeala[x].sortiment %></td>
+            <td><%= arrPrajeala[x].cantitate %></td>
+          </tr>
+          <% } %>
+     
       </table>
+    </div>
 </div>
 
 

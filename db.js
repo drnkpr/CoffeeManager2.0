@@ -16,19 +16,19 @@ var coffeeSchema = new mongoose.Schema({
 
 var Coffee = mongoose.model('Coffee', coffeeSchema);
 
-Coffee.create({
-    name: "ceapa",
-    cantitateVerde: 22,
-    cantitatePrajita: 0, 
-    procent: 60,
-    note: "asa era sa mai fie inca o data sau de 2 ori"
- }, function(err, coffee){
-     if(err){
-         console.log(err);
-     } else {
-         console.log(coffee);
-     }
- });
+// Coffee.create({
+//     name: "ceapa",
+//     cantitateVerde: 22,
+//     cantitatePrajita: 0, 
+//     procent: 60,
+//     note: "asa era sa mai fie inca o data sau de 2 ori"
+//  }, function(err, coffee){
+//      if(err){
+//          console.log(err);
+//      } else {
+//          console.log(coffee);
+//      }
+//  });
 
 
 var roastSchema = new mongoose.Schema({
@@ -51,4 +51,86 @@ var evacuareSchema = new mongoose.Schema({
 });
 
 var Evacuare = mongoose.model('Evacuare', evacuareSchema);
+
+
+var prajitaSchema = new mongoose.Schema({
+    sortiment: String,
+    cantitate: Number,
+    client: String, 
+    failed: Boolean,
+    prajitor: String, 
+    date: String,
+    note: String
+});
+var Prajita = mongoose.model('Prajita', prajitaSchema);
+
+
+
+
+
+Prajita.create({
+    sortiment: 'dada',
+    cantitate: 123,
+    client: 'pt acasa',
+    failed: 0,
+    prajitor: "angajat",
+    date: "22.22.22",
+    note: "a fost o data ca in povesti, a fost ca nikiodata"
+});
+
+
+
+Prajita.create({
+    sortiment: 'dada',
+    cantitate: 123,
+    client: 'pt acasa',
+    failed: 0,
+    prajitor: "angajat",
+    date: "22.22.22",
+    note: "a fost o data ca in povesti, a fost ca nikiodata"
+});
+
+
+
+
+
+Prajita.create({
+    sortiment: 'dada',
+    cantitate: 123,
+    client: 'pt acasa',
+    failed: 0,
+    prajitor: "angajat",
+    date: "22.22.22",
+    note: "a fost o data ca in povesti, a fost ca nikiodata"
+});
+
+
+
+
+
+Prajita.create({
+    sortiment: 'dada',
+    cantitate: 123,
+    client: 'pt acasa',
+    failed: 0,
+    prajitor: "angajat",
+    date: "22.22.22",
+    note: "a fost o data ca in povesti, a fost ca nikiodata"
+});
+
+
+
+
+
+
+
+Prajita.create({
+    sortiment: 'dada',
+    cantitate: 123,
+    client: 'pt acasa',
+    failed: 0,
+    prajitor: "angajat",
+    date: "22.22.22",
+    note: "a fost o data ca in povesti, a fost ca nikiodata"
+});
 
